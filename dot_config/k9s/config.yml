@@ -1,0 +1,53 @@
+k9s:
+  refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
+  headless: false
+  logoless: false
+  crumbsless: false
+  readOnly: false
+  noIcons: false
+  logger:
+    tail: 100
+    buffer: 5000
+    sinceSeconds: 60
+    fullScreenLogs: false
+    textWrap: false
+    showTime: false
+  currentContext: cluster-admin@lotta-ionos
+  currentCluster: lotta-ionos
+  clusters:
+    lotta-ionos:
+      namespace:
+        active: lotta
+        favorites:
+        - plausible
+        - linkerd
+        - monitoring
+        - chartmuseum
+        - argocd
+        - all
+        - ingress-nginx
+        - lotta-staging
+        - lotta
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
+  screenDumpDir: /tmp/k9s-screens-alexis

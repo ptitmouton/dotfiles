@@ -1,0 +1,67 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=$HOME/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt autocd beep nomatch
+bindkey -e
+# End of lines configured by zsh-newuser-install
+
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+
+fpath=($HOME/.config/zsh/completions $fpath)
+
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/alexis/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# Powerline fonts
+powerline-daemon -q
+. /usr/share/powerline/bindings/zsh/powerline.zsh
+
+# Load aliases from .aliases
+source $HOME/.aliases
+
+# set essential variables
+export EDITOR=vim
+export BROWSER=brave
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# Plugins (Antigen
+source $HOME/.config/zsh/antigen.zsh
+antigen bundle branch
+antigen bundle command-not-found
+antigen bundle dirhistory
+antigen bundle docker-compose
+antigen bundle elixir_mix
+antigen bundle emoji
+antigen bundle emoji-clock
+antigen bundle git
+antigen bundle git-remote-branch
+antigen bundle helm
+antigen bundle history
+antigen bundle kubetail
+antigen bundle node
+antigen bundle npm
+antigen bundle rsync
+antigen bundle ssh-agent
+antigen bundle systemd
+antigen bundle themes
+antigen bundle tig
+antigen bundle zsh-completions
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-history-substring-search ./zsh-history-substring-search.zsh
+
+antigen theme denysdovhan/spaceship-prompt
+
+antigen apply
+
+# Spaceship Prompt
+SPACESHIP_PROMPT_SEPARATE_LINE=0
+
+# z Support
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh

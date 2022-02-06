@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/alexis/development/einsa/lotta/landingpage'
+let g:netrw_dirhist_7='/home/alexis/development/einsa/lotta/helm-charts/lotta-core'
+let g:netrw_dirhist_6='/home/alexis/development/einsa/lotta/cockpit/.git'
+let g:netrw_dirhist_5='/home/alexis/development/einsa/lotta/helm-charts/lotta-cockpit'
+let g:netrw_dirhist_4='/home/alexis/development/einsa/lotta/helm-charts'
+let g:netrw_dirhist_3='/home/alexis/development/einsa/lotta/api-server/.elixir_ls'
+let g:netrw_dirhist_2='/home/alexis/development/einsa/lotta/cockpit'
+let g:netrw_dirhist_1='/home/alexis/development/einsa/lotta/helm-charts'
