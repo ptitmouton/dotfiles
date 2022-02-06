@@ -1,0 +1,21 @@
+# Alexis' dotfiles
+
+## Usage
+
+These dotfiles are meant to be used with [chezmoi](https://chezmoi.io).
+
+## Installation
+
+On a new machine, you will need to have Chezmoi installed:
+
+``` bash
+# on macOS, install homebrew, then chezmoi
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install chezmoi
+# on arch
+pacman -S chezmoi
+
+# Then init
+chezmoi init git@github.com/ptitmouton/dotfiles
+chezmoi apply
+```
