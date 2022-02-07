@@ -14,7 +14,7 @@
         "revision": "4b703e446be1d848521b0bdf3e85f36bb3aae1f9"
       },
       "homebrew/cask": {
-        "revision": "4ed8d97e3550148ab39faf8245a46b1ba39befc8"
+        "revision": "a4413eca982496516ddf9e6fd208a2d473697aff"
       },
       "homebrew/cask-drivers": {
         "revision": "8bc67079bf6bf639a0024e9dd741941abf84c060"
@@ -26,7 +26,7 @@
         "revision": "273bb4f52223b68fc721e70869bead532156dd1c"
       },
       "homebrew/core": {
-        "revision": "1ff354502948fe437b3064508e598705446406fe"
+        "revision": "ddddcd61d9ad17f26c9706540be2369593207f3c"
       },
       "homebrew/services": {
         "revision": "59b361bb330e48ae62f6e8175002cfa8dfeeecb8"
@@ -6573,9 +6573,9 @@
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.3.13",
+        "HOMEBREW_VERSION": "3.3.14",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "1ff354502948fe437b3064508e598705446406fe",
+        "Homebrew/homebrew-core": "ddddcd61d9ad17f26c9706540be2369593207f3c",
         "CLT": "13.2.0.0.1.1638488800",
         "Xcode": "13.2.1",
         "macOS": "12.2"
