@@ -19,3 +19,17 @@ pacman -S chezmoi
 chezmoi init git@github.com/ptitmouton/dotfiles
 chezmoi apply
 ```
+
+### Manual Steps
+
+**TODO**: Could probably be automated via AppleScript or so
+
+#### iTerm
+
+For iterm, you will have to set the config dir:
+
+- Open iTerm
+- Open Preferences Settings (iTerm2 > Settings > General > Preferences)
+- Tick "Load Preferences from a custom folder or URL"
+- Enter "$HOME/.config/iterm" into the text  field
+
