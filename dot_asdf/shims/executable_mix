@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# asdf-plugin: elixir 1.13.2-otp-24
-# asdf-plugin: elixir 1.13.1
-exec /usr/local/opt/asdf/libexec/bin/asdf exec "mix" "$@"
