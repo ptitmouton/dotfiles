@@ -6,6 +6,10 @@ setopt autocd beep nomatch
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+# Powerline fonts
+powerline-daemon -q
+. /usr/share/powerline/bindings/zsh/powerline.zsh
+
 # Plugins (Antigen
 source $HOME/.config/zsh/antigen.zsh
 antigen bundle branch
@@ -47,10 +51,6 @@ zstyle :compinstall filename '/home/alexis/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-# Powerline fonts
-powerline-daemon -q
-. /usr/share/powerline/bindings/zsh/powerline.zsh
 
 # Load aliases from .aliases
 source $HOME/.aliases
