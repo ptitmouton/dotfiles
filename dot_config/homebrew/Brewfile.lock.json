@@ -26,7 +26,7 @@
         "revision": "273bb4f52223b68fc721e70869bead532156dd1c"
       },
       "homebrew/core": {
-        "revision": "46fb62aaca603aa181b76f8e54cf8679113ec832"
+        "revision": "563c8bc681236ffe7881e5bde8f3e55662c98157"
       },
       "homebrew/services": {
         "revision": "59b361bb330e48ae62f6e8175002cfa8dfeeecb8"
@@ -6453,6 +6453,12 @@
         "options": {
           "full_name": "zoc"
         }
+      },
+      "font-meslo-for-powerline": {
+        "version": "2015-12-04",
+        "options": {
+          "full_name": "font-meslo-for-powerline"
+        }
       }
     },
     "mas": {
@@ -6563,7 +6569,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.3.13",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "46fb62aaca603aa181b76f8e54cf8679113ec832",
+        "Homebrew/homebrew-core": "563c8bc681236ffe7881e5bde8f3e55662c98157",
         "CLT": "13.2.0.0.1.1638488800",
         "Xcode": "13.2.1",
         "macOS": "12.2"
