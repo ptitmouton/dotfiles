@@ -14,6 +14,8 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 
+Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
+
 Plug 'mattn/webapi-vim' " utility to call Web APIs, is dependency of multiple other plugins
 
 Plug 'ryanoasis/vim-devicons' " icons everywhere!
