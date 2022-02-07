@@ -1,0 +1,9 @@
+open:split.intelligent
+open:split.plain
+open:tab
+pasteFile
+copyFile
+rename
+gotoParent
+refresh
+delete
