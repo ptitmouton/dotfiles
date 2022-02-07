@@ -1,3 +1,0 @@
-pane	fusion	1	:nvim	1	:*	1	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	1	nvim	:nvim
-window	fusion	1	1	:*	b25d,270x70,0,0,0
-state	fusion	

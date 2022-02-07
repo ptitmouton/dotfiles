@@ -1,6 +1,0 @@
-pane	be-apps	1	:zsh	1	:*	1	:/Users/arinaldoni	1	zsh	:
-pane	priv	1	:k9s	1	:*Z	1	:/Users/arinaldoni	1	k9s	:k9s
-pane	priv	1	:k9s	1	:*Z	2	:/Users/arinaldoni	0	zsh	:
-window	be-apps	1	1	:*	b25d,270x70,0,0,0
-window	priv	1	1	:*Z	e205,270x70,0,0{150x70,0,0,1,119x70,151,0,2}
-state	priv	be-apps
