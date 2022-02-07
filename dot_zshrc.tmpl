@@ -26,7 +26,9 @@ antigen bundle emoji
 antigen bundle emoji-clock
 antigen bundle git
 antigen bundle git-remote-branch
+{{ if eq .chezmoi.os "linux" -}}
 antigen bundle helm
+{{ end -}}
 antigen bundle history
 antigen bundle kubetail
 antigen bundle node
@@ -45,9 +47,13 @@ antigen theme romkatv/powerlevel10k
 
 antigen apply
 
+{{ if eq .chezmoi.os "darwin" -}}
+. $(brew --prefix asdf)/asdf.sh
+{{ else if eq .chezmoi.os "linux" -}}
 . $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
+{{ end -}}
 
+fpath=(${ASDF_DIR}/completions $fpath)
 fpath=($HOME/.config/zsh/completions $fpath)
 
 # The following lines were added by compinstall
