@@ -1,0 +1,10 @@
+pane	fusion	1	:fusion	1	:*	1	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	1	nvim	:nvim
+pane	fusion	1	:fusion	1	:*	2	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	0	node	:npm start  
+pane	fusion	2	:fusion-dev	0	:	1	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion-dev	0	zsh	:
+pane	fusion	2	:fusion-dev	0	:	2	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion-dev	1	dotnet	:dotnet run --project Core
+pane	fusion	3	:core-desktop	0	:##-	1	:/Users/arinaldoni/Documents/bemobile/bemobile-core-desktop	0	zsh	:
+pane	fusion	3	:core-desktop	0	:##-	2	:/Users/arinaldoni/Documents/bemobile/bemobile-core-desktop	1	node	:npm start  
+window	fusion	1	1	:*	d1c6,270x70,0,0[270x50,0,0,0,270x19,0,51,5]
+window	fusion	2	0	:	51c8,270x70,0,0[270x50,0,0,1,270x19,0,51,4]
+window	fusion	3	0	:##-	d1c9,270x70,0,0[270x50,0,0,2,270x19,0,51,3]
+state	fusion	

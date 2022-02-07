@@ -1,0 +1,20 @@
+pane	be-apps	1	:be-apps	1	:##*	1	:/Users/arinaldoni/Documents/bemobile/be-apps	1	zsh	:
+pane	be-apps	1	:be-apps	1	:##*	2	:/Users/arinaldoni/Documents/bemobile/be-apps	0	zsh	:
+pane	be-apps	1	:be-apps	1	:##*	3	:/Users/arinaldoni/Documents/bemobile/be-apps	0	zsh	:
+pane	be-fusion	1	:be-apps	1	:*	1	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	0	zsh	:
+pane	be-fusion	1	:be-apps	1	:*	2	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	1	node	:npm start  
+pane	be-fusion	1	:be-apps	1	:*	3	:/Users/arinaldoni/Documents/bemobile/be-apps	0	zsh	:
+pane	docs	1	:docs	1	:##*	1	:/Users/arinaldoni/Documents/bemobile/documentation	0	zsh	:
+pane	docs	1	:docs	1	:##*	2	:/Users/arinaldoni/Documents/bemobile/documentation/site	1	zsh	:
+pane	docs	1	:docs	1	:##*	3	:/Users/arinaldoni/Documents/bemobile/documentation	0	zsh	:
+pane	fusionbuilder	1	:[tmux]	1	:*Z	1	:/Users/arinaldoni/Documents/bemobile/bemobile-fusionbuilderjs	1	nvim	:nvim
+pane	fusionbuilder	1	:[tmux]	1	:*Z	2	:/Users/arinaldoni/Documents/bemobile/bemobile-fusionbuilderjs	0	zsh	:
+pane	natives	1	:zsh	1	:*	1	:/Users/arinaldoni/Documents/bemobile/bemobile-core-desktop	0	nvim	:nvim
+pane	natives	1	:zsh	1	:*	2	:/Users/arinaldoni/Documents/bemobile/bemobile-core-desktop	0	node	:npm start  
+pane	natives	1	:zsh	1	:*	3	:/Users/arinaldoni/Documents/bemobile/bemobile-core-desktop	1	zsh	:
+window	be-apps	1	1	:##*	4b53,272x70,0,0[272x50,0,0,0,272x19,0,51{136x19,0,51,1,135x19,137,51,2}]
+window	be-fusion	1	1	:*	80a0,270x70,0,0[270x45,0,0,3,270x24,0,46{135x24,0,46,4,134x24,136,46,5}]
+window	docs	1	1	:##*	7545,272x70,0,0[272x55,0,0,7,272x14,0,56{121x14,0,56,8,150x14,122,56,9}]
+window	fusionbuilder	1	1	:*Z	e92e,270x70,0,0[270x50,0,0,6,270x19,0,51,10]
+window	natives	1	1	:*	9fbf,270x70,0,0[270x45,0,0,11,270x24,0,46{135x24,0,46,12,134x24,136,46,13}]
+state	natives	be-fusion

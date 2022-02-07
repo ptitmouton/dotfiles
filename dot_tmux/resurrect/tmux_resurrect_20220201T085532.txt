@@ -1,0 +1,7 @@
+pane	be-apps	1	:zsh	1	:*	1	:/Users/arinaldoni	1	zsh	:
+pane	fusion	1	:[tmux]	1	:*Z	1	:/Users/arinaldoni/Documents/bemobile/be-apps	1	nvim	:nvim
+pane	fusion	1	:[tmux]	1	:*Z	2	:/Users/arinaldoni/Documents/bemobile/be-apps	0	zsh	:
+pane	fusion	1	:[tmux]	1	:*Z	3	:/Users/arinaldoni/Documents/bemobile/be-apps	0	docker	:docker compose up
+window	be-apps	1	1	:*	b360,272x70,0,0,3
+window	fusion	1	1	:*Z	4b53,272x70,0,0[272x50,0,0,0,272x19,0,51{136x19,0,51,1,135x19,137,51,2}]
+state	be-apps	fusion

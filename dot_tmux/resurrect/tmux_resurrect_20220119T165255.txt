@@ -1,0 +1,32 @@
+pane	be-apps	1	:[tmux]	1	:*Z	1	:/Users/arinaldoni/Documents/bemobile/be-apps2	0	zsh	:
+pane	be-apps	1	:[tmux]	1	:*Z	2	:/Users/arinaldoni/Documents/bemobile/be-apps2	0	zsh	:
+pane	be-apps	1	:[tmux]	1	:*Z	3	:/Users/arinaldoni/Documents/bemobile/be-apps2	0	zsh	:
+pane	be-apps	1	:[tmux]	1	:*Z	4	:/Users/arinaldoni/Documents/bemobile/be-apps2	1	zsh	:
+pane	be-apps	2	:nvim	0	:	1	:/Users/arinaldoni/Documents/bemobile/be-apps	1	nvim	:nvim
+pane	be-apps	3	:zsh	0	:	1	:/Users/arinaldoni	1	zsh	:
+pane	be-apps	4	:nvim	0	:-	1	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	1	nvim	:nvim
+pane	bem-fusion	1	:fusion	0	:-	1	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	1	nvim	:nvim
+pane	bem-fusion	1	:fusion	0	:-	2	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	0	node	:npm start  
+pane	bem-fusion	1	:fusion	0	:-	3	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion	0	zsh	:
+pane	bem-fusion	1	:fusion	0	:-	4	:/Users/arinaldoni/Documents/bemobile/__test_csv	0	zsh	:
+pane	bem-fusion	2	:core-desktop	1	:*	1	:/Users/arinaldoni/Documents/bemobile/bemobile-core-desktop	0	nvim	:nvim
+pane	bem-fusion	2	:core-desktop	1	:*	2	:/Users/arinaldoni/Documents/bemobile/bemobile-core-desktop	1	node	:npm start  
+pane	bem-fusion	2	:core-desktop	1	:*	3	:/Users/arinaldoni/Documents/bemobile/bemobile-core-desktop	0	zsh	:
+pane	bem-fusion	3	:dotnet	0	:Z	1	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion-dev	1	nvim	:nvim
+pane	bem-fusion	3	:dotnet	0	:Z	2	:/Users/arinaldoni/Documents/bemobile/bemobile-fusion-dev	0	dotnet	:dotnet run --project Core
+pane	bem-fusion	4	:__test_csv	0	:M	1	:/Users/arinaldoni/Documents/bemobile/__test_csv	0	nvim	:nvim BEMFOrder
+pane	bem-fusion	4	:__test_csv	0	:M	2	:/Users/arinaldoni/Documents/bemobile/__test_csv	1	zsh	:
+pane	manor	1	:zsh	1	:*	1	:/Users/arinaldoni/Documents/bemobile/bemobile-manor	1	zsh	:
+pane	priv	1	:k9s	1	:##*	1	:/Users/arinaldoni	0	zsh	:
+pane	priv	1	:k9s	1	:##*	2	:/Users/arinaldoni	1	zsh	:
+window	be-apps	1	1	:*Z	9382,270x61,0,0[270x39,0,0,0,270x21,0,40{120x21,0,40,3,79x21,121,40,4,69x21,201,40,7}]
+window	be-apps	2	0	:	b462,270x61,0,0,5
+window	be-apps	3	0	:	b463,270x61,0,0,6
+window	be-apps	4	0	:-	b466,270x61,0,0,9
+window	bem-fusion	1	0	:-	3517,270x70,0,0[270x50,0,0,12,270x19,0,51{110x19,0,51,14,92x19,111,51,15,66x19,204,51,20}]
+window	bem-fusion	2	1	:*	6f9f,270x70,0,0[270x50,0,0,13,270x19,0,51{135x19,0,51,17,134x19,136,51,25}]
+window	bem-fusion	3	0	:Z	ede3,270x70,0,0[270x50,0,0,18,270x19,0,51,19]
+window	bem-fusion	4	0	:M	addb,270x70,0,0[270x50,0,0,22,270x19,0,51,23]
+window	manor	1	1	:*	595f,270x70,0,0,10
+window	priv	1	1	:##*	ab2b,270x70,0,0{95x70,0,0,1,174x70,96,0,2}
+state	bem-fusion	manor

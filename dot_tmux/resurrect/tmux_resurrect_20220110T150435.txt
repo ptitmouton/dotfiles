@@ -1,0 +1,10 @@
+pane	be-apps	1	:nvim	1	:*	1	:/Users/arinaldoni/Documents/bemobile/be-apps2	1	nvim	:nvim
+pane	be-apps	1	:nvim	1	:*	2	:/Users/arinaldoni/Documents/bemobile/be-apps2	0	node	:npm run dev   
+pane	be-apps	1	:nvim	1	:*	3	:/Users/arinaldoni/Documents/bemobile/be-apps2	0	zsh	:
+pane	be-apps	2	:zsh	0	:-	1	:/Users/arinaldoni/Documents/bemobile/be-apps	1	zsh	:
+pane	priv	1	:k9s	1	:*Z	1	:/Users/arinaldoni	1	zsh	:
+pane	priv	1	:k9s	1	:*Z	2	:/Users/arinaldoni	0	zsh	:
+window	be-apps	1	1	:*	2e08,270x70,0,0[270x50,0,0,0,270x19,0,51{140x19,0,51,3,129x19,141,51,4}]
+window	be-apps	2	0	:-	b262,270x70,0,0,5
+window	priv	1	1	:*Z	e205,270x70,0,0{150x70,0,0,1,119x70,151,0,2}
+state	be-apps	priv
