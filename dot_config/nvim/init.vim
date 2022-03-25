@@ -12,6 +12,7 @@ endif
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'github/copilot.vim'
 Plug 'mhinz/vim-startify'
 
 Plug 'mhartington/nvim-typescript', { 'build': './install.sh' }
