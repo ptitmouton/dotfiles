@@ -11,6 +11,7 @@
 [core]
 	excludesfile = /Users/arinaldoni/.gitignore_global
 	ignoreCase = false
+  pager = delta
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -20,3 +21,9 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
