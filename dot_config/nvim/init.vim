@@ -32,9 +32,6 @@ Plug 'tpope/vim-surround'
 " indentation Line
 Plug 'Yggdroot/indentLine'
 
-" formatting
-Plug 'sbdchd/neoformat'
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -68,8 +65,12 @@ Plug 'HerringtonDarkholme/yats.vim'
 " typescript support
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
+" JS Frameworks
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
 " elixir support
 Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 Plug 'slashmili/alchemist.vim'
 Plug 'lucidstack/hex.vim'
 
@@ -92,29 +93,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events' "terminal vim FocusGained & FocusLost 
 
 "COC and COC plugins
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-Plug 'voldikss/coc-cmake', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'antonk52/coc-cssmodules', {'do': 'yarn install --frozen-lockfile'}
-Plug 'josa42/coc-docker', {'do': 'yarn install --frozen-lockfile'}
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
-Plug 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-git', {'do': 'yarn install --frozen-lockfile'}
-Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'} " color highlighting
-Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'} " mru and stuff
-Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
-Plug 'josa42/coc-sh', {'do': 'yarn install --frozen-lockfile'}
-Plug 'fannheyward/coc-sql', {'do': 'yarn install --frozen-lockfile'}
-Plug 'iamcco/coc-vimlsp', {'do': 'yarn install --frozen-lockfile'}
-Plug 'fannheyward/coc-xml', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
-
 
 "
 " Themes
@@ -154,6 +133,9 @@ let g:indentLine_concealcursor = 0
 let g:indentLine_char = 'â”†'
 let g:indentLine_faster = 1
 
+" Mix format
+let g:mix_format_on_save = 1
+
 
 set mouse=a " mouse support
 
@@ -162,6 +144,11 @@ set mouse=a " mouse support
 """
 syntax on
 colorscheme OceanicNext
+
+"""
+" Custom commands
+""""
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " tab navigation
 map <C-T>h :tabp<CR>
@@ -183,7 +170,7 @@ nnoremap <Leader>Tb :TigBlame<CR>
 
 nnoremap <Leader>t :TestFile<CR>
 
-nnoremap <Leader>f :CocFix<CR>
+nnoremap <Leader>f <Plug>(coc-fix-current)
 
 map <C-p> :Files<CR>
 map <Leader><C-p> :GFiles<CR>
@@ -196,6 +183,9 @@ tnoremap <Leader><Esc> <C-\><C-n>
 nnoremap <silent> <leader><space> :noh<cr>
 
 nmap <space>e :CocCommand explorer<CR>
+
+nmap <leader>F <Plug>(coc-format-selected)<CR>
+vmap <leader>F <Plug>(coc-format-selected)<CR>
 
 
 """
@@ -288,8 +278,6 @@ augroup vimrc-javascript
     autocmd!
     autocmd BufNewFile,BufRead *.js setlocal filetype=javascript tabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.jsx setlocal filetype=javascriptreact tabstop=4 shiftwidth=4
-    autocmd BufWritePre *.jsx Neoformat
-    autocmd BufWritePre *.js Neoformat
 augroup END
 
 """ typescript
@@ -298,8 +286,6 @@ augroup vimrc-typescript
     autocmd FileType typescript setlocal completeopt+=menu,preview
     autocmd BufNewFile,BufRead *.tsx setlocal filetype=typescriptreact tabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript tabstop=4 shiftwidth=4
-    autocmd BufWritePre *.tsx Neoformat prettier
-    autocmd BufWritePre *.ts Neoformat prettier
 augroup END
 
 """ CSS / SCSS
@@ -308,14 +294,11 @@ augroup vimrc-css
     autocmd FileType css setlocal completeopt+=menu,preview
     autocmd BufNewFile,BufRead *.css setlocal filetype=css tabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.scss setlocal filetype=scss tabstop=4 shiftwidth=4
-    autocmd BufWritePre *.css Neoformat prettier
-    autocmd BufWritePre *.scss Neoformat prettier
 augroup END
 
 """ GraphQL
 augroup vimrc-graphql
     autocmd!
-    autocmd BufWritePre *.graphql Neoformat prettier
 augroup END
 
 "" jinja templates
@@ -328,15 +311,13 @@ augroup END
 augroup vimrc-elixir
     autocmd!
     autocmd BufNewFile,BufRead *.exs setlocal filetype=elixir
-    autocmd BufWritePre *.ex Neoformat
-    autocmd BufWritePre *.exs Neoformat
+    autocmd BufNewFile,BufRead *.ex setlocal filetype=elixir
 augroup END
 
 "" rust
 augroup vimrc-rust
     autocmd!
     autocmd BufNewFile,BufRead *.rs setlocal filetype=rust
-    autocmd BufWritePre *.rs Neoformat
 augroup END
 
 "" make/cmake

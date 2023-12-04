@@ -1,13 +1,3 @@
--- local lspconfig_setup, lspconfig = pcall(require, 'lspconfig')
--- if not lspconfig_setup then
---   return
--- end
--- 
--- local typescript_setup, typescript = pcall(require, 'typescript')
--- if not typescript_setup then
---   return
--- end
-
 require('mason').setup {
   -- your configuration comes here
   -- or leave it empty to use the default settings
@@ -88,6 +78,7 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 require('lspconfig').lua_ls.setup{
     settings = {
