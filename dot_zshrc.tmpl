@@ -48,7 +48,7 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 
 {{ if eq .chezmoi.os "darwin" -}}
-. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 {{ else if eq .chezmoi.os "linux" -}}
 . $HOME/.asdf/asdf.sh
 {{ end -}}
