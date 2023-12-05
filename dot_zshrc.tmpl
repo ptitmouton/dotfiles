@@ -39,6 +39,7 @@ antigen bundle systemd
 antigen bundle themes
 antigen bundle tig
 antigen bundle zsh-completions
+antigen bundle agkozak/zsh-z
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-history-substring-search ./zsh-history-substring-search.zsh
@@ -70,10 +71,6 @@ source $HOME/.aliases
 export EDITOR=vim
 export BROWSER=brave
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-
-# z Support
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
