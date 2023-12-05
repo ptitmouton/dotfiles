@@ -1,0 +1,46 @@
+cmd + alt - r : yabai --restart-service
+cmd + alt - f : yabai -m config layout float
+cmd + alt - b : yabai -m config layout bsp
+
+cmd + alt - h : yabai -m window --focus west  || yabai -m display --focus west 
+cmd + alt - j : yabai -m window --focus south || yabai -m display --focus south
+cmd + alt - k : yabai -m window --focus north || yabai -m display --focus north
+cmd + alt - l : yabai -m window --focus east  || yabai -m display --focus east 
+
+cmd + ctrl + alt - h : yabai -m window --swap west  || yabai -m window --display west
+cmd + ctrl + alt - j : yabai -m window --swap south || yabai -m window --display south
+cmd + ctrl + alt - k : yabai -m window --swap north || yabai -m window --display north
+cmd + ctrl + alt - l : yabai -m window --swap east  || yabai -m window --display east
+
+cmd + alt + shift - h : yabai -m window --resize left:-20:0
+cmd + alt + shift - j : yabai -m window --resize top:20:0
+cmd + alt + shift - k : yabai -m window --resize top:-20:0
+cmd + alt + shift - l : yabai -m window --resize left:20:0
+
+cmd + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# Change to space <num> by pressing ctrl+cmd+<num>
+ctrl + cmd - 0x12 : yabai -m space --focus 1
+ctrl + cmd - 0x13 : yabai -m space --focus 2
+ctrl + cmd - 0x14 : yabai -m space --focus 3
+ctrl + cmd - 0x15 : yabai -m space --focus 4
+ctrl + cmd - 0x17 : yabai -m space --focus 5
+ctrl + cmd - 0x16 : yabai -m space --focus 6
+ctrl + cmd - 0x1A : yabai -m space --focus 7
+ctrl + cmd - 0x1C : yabai -m space --focus 8
+ctrl + cmd - 0x19 : yabai -m space --focus 9
+ctrl + cmd - 0x1D : yabai -m space --focus 10
+
+# Move window to space <num> by pressing shift+ctrl+cmd+<num>
+shift + ctrl + cmd - 0x12 : yabai -m window --space 1
+shift + ctrl + cmd - 0x13 : yabai -m window --space 2
+shift + ctrl + cmd - 0x14 : yabai -m window --space 3
+shift + ctrl + cmd - 0x15 : yabai -m window --space 4
+shift + ctrl + cmd - 0x17 : yabai -m window --space 5
+shift + ctrl + cmd - 0x16 : yabai -m window --space 6
+shift + ctrl + cmd - 0x1A : yabai -m window --space 7
+shift + ctrl + cmd - 0x1C : yabai -m window --space 8
+shift + ctrl + cmd - 0x19 : yabai -m window --space 9
+shift + ctrl + cmd - 0x1D : yabai -m window --space 10
+
+cmd + alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
