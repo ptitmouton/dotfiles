@@ -1,8 +1,8 @@
 local opt = vim.opt
 
-opt.syntax="on"
+opt.syntax = "on"
 
-opt.encoding="UTF-8"
+opt.encoding = "UTF-8"
 opt.ruler = true
 
 -- line number
@@ -10,13 +10,13 @@ opt.number = true
 opt.relativenumber = true
 
 -- default to tabwidth 2
-opt.tabstop=2
-opt.shiftwidth=2
+opt.tabstop = 2
+opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
 -- mouse support
-opt.mouse="a"
+opt.mouse = "a"
 
 -- line wrap
 opt.wrap = false
@@ -51,9 +51,7 @@ vim.g.neoterm_autoscroll = true
 
 -- Make json quotes not being nastily hidden
 -- This was caused by identLine setting concealLevel to 2
-vim.g.indentLine_fileTypeExclude = {"json"}
+vim.g.indentLine_fileTypeExclude = { "json" }
 vim.g.vim_json_syntax_conceal = 0
 vim.g.vim_markdown_conceal = 0
 vim.g.vim_markdown_conceal_code_blocks = 0
-
-

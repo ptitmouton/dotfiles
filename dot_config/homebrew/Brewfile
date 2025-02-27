@@ -23,8 +23,10 @@ brew "colordiff"
 brew "composer"
 brew "coreutils"
 brew "cowsay"
+brew "ctop"
 brew "cython"
 brew "derailed/k9s/k9s"
+brew "diff-so-fancy"
 brew "dive"
 brew "doctl"
 brew "dust"
@@ -87,13 +89,11 @@ brew "llvm"
 brew "lynx"
 brew "mariadb", restart_service: true
 brew "mas"
-brew "macvim"
 brew "meson"
 brew "minikube", link: false
 brew "mpv"
 brew "mtr"
-brew "nativeos/i386-elf-toolchain/i386-elf-binutils"
-brew "nativeos/i386-elf-toolchain/i386-elf-gcc"
+brew "navi"
 brew "ncdu"
 brew "neofetch"
 brew "neomutt"
@@ -113,8 +113,8 @@ brew "poppler"
 brew "postgresql"
 brew "procs"
 brew "pv"
-brew "python@3.8"
 brew "python@3.9"
+brew "python@3.10"
 brew "qemu"
 brew "qt"
 brew "ranger"
@@ -150,9 +150,9 @@ brew "x86_64-elf-binutils"
 brew "x86_64-elf-gcc"
 brew "xorriso"
 brew "xz"
+brew "koekeishiya/formulae/yabai"
 brew "yarn"
 brew "youtube-dl"
-brew "z"
 brew "z"
 brew "zbar"
 brew "zlib"
@@ -164,17 +164,13 @@ cask "1password-cli"
 cask "alacritty"
 cask "android-studio"
 cask "brave-browser"
-cask "catlight"
 cask "cyberduck"
 cask "daisydisk"
 cask "db-browser-for-sqlite"
 cask "dotnet-sdk"
-cask "emacs"
 cask "font-fira-code"
 cask "font-meslo-for-powerline"
 cask "fork"
-cask "freecad"
-cask "gimp"
 cask "gitkraken"
 cask "google-chrome"
 cask "google-chrome-canary"
@@ -226,23 +222,19 @@ cask "webpquicklook"
 cask "whatsapp"
 cask "wkhtmltopdf"
 cask "wwdc"
-cask "xnviewmp"
 cask "xquartz"
 cask "zoc"
+
 mas "1Password 7", id: 1333542190
 mas "Affinity Designer", id: 824171161
 mas "Apple Configurator 2", id: 1037126344
 mas "Barracuda VPN Client", id: 1555242566
-mas "Cardhop", id: 1290358394
 mas "DevCleaner", id: 1388020431
 mas "Developer", id: 640199958
-mas "Evernote", id: 406056744
 mas "Fantastical", id: 975937182
-mas "GitLab Control", id: 1272162567
 mas "Keynote", id: 409183694
 mas "MacFamilyTree 9", id: 1458866808
 mas "Mactracker", id: 430255202
-mas "Magnet", id: 441258766
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft OneNote", id: 784801555
 mas "Microsoft Outlook", id: 985367838
@@ -254,14 +246,10 @@ mas "PiPifier", id: 1160374471
 mas "Pixelmator", id: 407963104
 mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
+
 tap "argoproj/tap"
 tap "derailed/k9s"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "johanhaleby/kubetail"
 tap "kube-score/tap"

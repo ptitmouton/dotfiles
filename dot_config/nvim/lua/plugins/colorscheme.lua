@@ -1,18 +1,13 @@
 return {
   {
-    'navarasu/onedark.nvim',
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    opts = {
-      style = 'darker'
-    },
-    init = function()
-      local onedark = require('onedark')
-      onedark.load()
+    opts = {},
+    config = function()
       vim.opt.termguicolors = true
-      vim.cmd.colorscheme('onedark')
+      vim.cmd.colorscheme('tokyonight')
     end
   },
-	'nvim-web-devicons',
-	'vim-devicons',
+  'nvim-web-devicons'
 }
