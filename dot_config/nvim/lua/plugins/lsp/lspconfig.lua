@@ -2,15 +2,10 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
-		local mason_lspconfig = require("mason-lspconfig")
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
 		local keymap = vim.keymap
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -34,6 +29,8 @@ return {
 				keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
 				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 				keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+
+				keymap.set("n", "<leader>se", vim.diagnostic.open_float, opts)
 				-- keymap.set("n", "<Leader>f", function()
 				-- 	lsp.buf.format({ async = true })
 				-- end, opts)
@@ -57,42 +54,5 @@ return {
 			end,
 		})
 
-		local capabilities = cmp_nvim_lsp.default_capabilities()
-
-		mason_lspconfig.setup_handlers({
-			-- default handler
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
-			["lua_ls"] = function()
-				lspconfig.lua_ls.setup({
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							diagnostics = {
-								globals = { "vim" },
-							},
-							completion = {
-								callSnippet = "Replace",
-							},
-						},
-					},
-				})
-			end,
-			["elixirls"] = function()
-				lspconfig.elixirls.setup({
-					capabilities = capabilities,
-					cmd = { "elixir-ls" },
-				})
-			end,
-			["nextls"] = function()
-				lspconfig.nextls.setup({
-					capabilities = capabilities,
-					cmd = { "nextls" },
-				})
-			end,
-		})
 	end,
 }
