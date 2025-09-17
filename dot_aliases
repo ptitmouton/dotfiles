@@ -1,3 +1,4 @@
 alias vim=nvim
 alias cat=bat
-alias l="exa --all --group-directories-first --git --classify --long --color automatic --icons --changed"
+alias l="eza --all --group-directories-first --git --classify --long --icons --changed"
+alias py="python3"
